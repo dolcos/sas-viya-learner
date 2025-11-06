@@ -33,8 +33,15 @@ castbl <- defCasTable(conn, 'cars')
 
 print(class(castbl))
 
-df <- head(to.casDataFrame(castbl))
+df <- to.data.frame(to.casDataFrame(castbl))
 
-print(df)
+str(df)
+
+head(df)
+
+summary(df)
+
+cas.close(conn)
+
 
 
